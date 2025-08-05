@@ -1,69 +1,39 @@
-# React + TypeScript + Vite
+# 🌦️ Интерактивное приложение «Weather Insight»
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Интерактивное [приложение](https://weather-insight-one.vercel.app) для визуализации погодных данных в разных геолокациях. Позволяет просматривать почасовой прогноз температуры и масштабировать временной диапазон до 7 дней.
 
-Currently, two official plugins are available:
+![alt text](/public/README.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Структура проекта
 
-## Expanding the ESLint configuration
+- weather-insight - текущий репозиторий
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Функциональность 
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Просмотр температуры в трёх городах (Амстердам, Нью-Йорк, Токио)
+- Переключение диапазона времени: 24 часа / 3 дня / 7 дней
+- Усреднение значений при просмотре дневных данных
+- Переключение цветовой темы (светлая / тёмная) с сохранением выбора
+- Анимации при загрузке графиков и переключении состояния
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✅ Выполненные задачи
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Спроектировал архитектуру приложения по FSD-подходу
+- Настроил адаптивную верстку под различные разрешения
+- Добавил переключение цветовых тем через Context API
+- Настроил сохранение пользовательских настроек (тема и диапазон) в localStorage
+- Реализовал плавные анимации интерфейса с Framer Motion
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Технологии 
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React, TypeScript, Recharts, SCSS, Framer Motion, Axios, Vite 
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Инструкция по запуску
+
+Чтобы запустить приложение, необходимо:
+1. Склонировать репозиторий:  
+```git clone git@github.com:Whittnee/weather-insight.git```
+2. Установить все зависимости:  
+```pnpm i или npm i```
+3. Теперь можно запустить приложение:  
+```pnpm dev или npm run dev```
