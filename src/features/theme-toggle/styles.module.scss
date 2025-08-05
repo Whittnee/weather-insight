@@ -1,0 +1,13 @@
+.button {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in;
+  padding: 8px 16px;
+  color: var(--main-color-dark);
+
+  &.dark {
+    color: var(--main-color-light);
+  }
+}

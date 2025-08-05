@@ -1,0 +1,16 @@
+.app {
+  background-color: var(--bg-color-light);
+  display: flex;
+  justify-content: center;
+  min-height: 100dvh;
+  &.dark {
+    background-color: var(--bg-color-dark);
+  }
+}
+
+.main {
+  display: flex;
+  min-height: 100dvh;
+  width: 100%;
+  flex-direction: column;
+}
